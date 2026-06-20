@@ -1,0 +1,1455 @@
+[
+  {
+    "timestamp": "2026-06-18T15:58:28.795337Z",
+    "agent": "PlannerAgent",
+    "action": "plan_workflow",
+    "task_type": "regression",
+    "confidence": 0.5
+  },
+  {
+    "timestamp": "2026-06-18T15:58:36.179380Z",
+    "agent": "ProfilingAgent",
+    "action": "profile_dataset",
+    "rows": 1459,
+    "columns": 80
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.335752Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "MSZoning"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.353068Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "LotFrontage"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.422766Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Utilities"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.478917Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Exterior1st"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.497215Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Exterior2nd"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.527664Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "MasVnrArea"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.547611Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtQual"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.568750Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtCond"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.593721Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtExposure"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.618372Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtFinType1"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.639977Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "BsmtFinSF1"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.668882Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtFinType2"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.694554Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "BsmtFinSF2"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.715533Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "BsmtUnfSF"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.732350Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "TotalBsmtSF"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.755004Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "BsmtFullBath"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.778645Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "BsmtHalfBath"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.796029Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "KitchenQual"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.819122Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Functional"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.844667Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "FireplaceQu"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.870213Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageType"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.890538Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "GarageYrBlt"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.914592Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageFinish"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.936563Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "GarageCars"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.955695Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "GarageArea"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.979693Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageQual"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:37.997706Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageCond"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:38.026630Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "SaleType"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.112678Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "MSZoning"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.121361Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "LotFrontage"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.143601Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Utilities"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.171980Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Exterior1st"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.196574Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Exterior2nd"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.219683Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "MasVnrArea"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.247499Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtQual"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.270884Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtCond"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.295240Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtExposure"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.311776Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtFinType1"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.344147Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "BsmtFinSF1"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.363443Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtFinType2"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.395158Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "BsmtFinSF2"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.413877Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "BsmtUnfSF"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.434189Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "TotalBsmtSF"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.464038Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "BsmtFullBath"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.486526Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "BsmtHalfBath"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.515764Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "KitchenQual"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.538140Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Functional"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.563894Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "FireplaceQu"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.587660Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageType"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.612012Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "GarageYrBlt"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.639250Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageFinish"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.659026Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "GarageCars"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.682380Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "GarageArea"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.715138Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageQual"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.741738Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageCond"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.761858Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "SaleType"
+  },
+  {
+    "timestamp": "2026-06-18T15:58:42.801251Z",
+    "agent": "CleaningAgent",
+    "action": "drop_columns",
+    "columns": [
+      "Alley",
+      "MasVnrType",
+      "PoolQC",
+      "Fence",
+      "MiscFeature"
+    ]
+  },
+  {
+    "timestamp": "2026-06-18T15:58:43.086438Z",
+    "agent": "EDAAgent",
+    "action": "generate_summary",
+    "num_numerical": 37,
+    "num_categorical": 38
+  },
+  {
+    "timestamp": "2026-06-18T15:58:59.275053Z",
+    "agent": "VisualizationAgent",
+    "action": "generate_charts",
+    "num_charts": 11
+  },
+  {
+    "timestamp": "2026-06-18T15:59:27.581220Z",
+    "agent": "PlannerAgent",
+    "action": "plan_workflow",
+    "task_type": "regression",
+    "confidence": 0.5
+  },
+  {
+    "timestamp": "2026-06-18T15:59:31.126307Z",
+    "agent": "ProfilingAgent",
+    "action": "profile_dataset",
+    "rows": 1459,
+    "columns": 80
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.275638Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "MSZoning"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.285259Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "LotFrontage"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.321762Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Utilities"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.342211Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Exterior1st"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.368263Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Exterior2nd"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.394488Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "MasVnrArea"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.414685Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtQual"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.444879Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtCond"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.471605Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtExposure"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.495854Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtFinType1"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.525660Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "BsmtFinSF1"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.550708Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtFinType2"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.577083Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "BsmtFinSF2"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.597210Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "BsmtUnfSF"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.624673Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "TotalBsmtSF"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.648373Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "BsmtFullBath"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.677379Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "BsmtHalfBath"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.698134Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "KitchenQual"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.728707Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Functional"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.759756Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "FireplaceQu"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.780124Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageType"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.804570Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "GarageYrBlt"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.825314Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageFinish"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.857130Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "GarageCars"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.894642Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "GarageArea"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.922396Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageQual"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.950380Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageCond"
+  },
+  {
+    "timestamp": "2026-06-18T15:59:32.973445Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "SaleType"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:27.867178Z",
+    "agent": "PlannerAgent",
+    "action": "plan_workflow",
+    "task_type": "regression",
+    "confidence": 0.5
+  },
+  {
+    "timestamp": "2026-06-19T07:59:31.886953Z",
+    "agent": "ProfilingAgent",
+    "action": "profile_dataset",
+    "rows": 1459,
+    "columns": 80
+  },
+  {
+    "timestamp": "2026-06-19T07:59:33.172073Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "MSZoning"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:33.348038Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "LotFrontage"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:33.502897Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Utilities"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:33.546024Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Exterior1st"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:33.585562Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Exterior2nd"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:33.635481Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "MasVnrArea"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:33.679162Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtQual"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:33.714714Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtCond"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:33.747167Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtExposure"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:33.796914Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtFinType1"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:33.839661Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "BsmtFinSF1"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:33.881842Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtFinType2"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:33.920155Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "BsmtFinSF2"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:33.964971Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "BsmtUnfSF"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:34.010205Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "TotalBsmtSF"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:34.046432Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "BsmtFullBath"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:34.094307Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "BsmtHalfBath"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:34.147768Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "KitchenQual"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:34.186492Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Functional"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:34.400232Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "FireplaceQu"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:34.550358Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageType"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:34.612928Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "GarageYrBlt"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:34.666343Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageFinish"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:34.740585Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "GarageCars"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:34.782678Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "GarageArea"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:34.831497Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageQual"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:34.877204Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageCond"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:34.913340Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "SaleType"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:37.915556Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "MSZoning"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:37.966058Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "LotFrontage"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.012696Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Utilities"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.056852Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Exterior1st"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.106825Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Exterior2nd"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.149191Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "MasVnrArea"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.193951Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtQual"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.244236Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtCond"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.280678Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtExposure"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.336878Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtFinType1"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.381076Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "BsmtFinSF1"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.420595Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "BsmtFinType2"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.465016Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "BsmtFinSF2"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.512542Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "BsmtUnfSF"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.564577Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "TotalBsmtSF"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.607360Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "BsmtFullBath"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.673627Z",
+    "agent": "CleaningAgent",
+    "action": "median_imputation",
+    "column": "BsmtHalfBath"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.715403Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "KitchenQual"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.761667Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "Functional"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.805591Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "FireplaceQu"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.852554Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageType"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.899943Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "GarageYrBlt"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.940249Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageFinish"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:38.995520Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "GarageCars"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:39.044779Z",
+    "agent": "CleaningAgent",
+    "action": "mean_imputation",
+    "column": "GarageArea"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:39.085790Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageQual"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:39.133507Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "GarageCond"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:39.180846Z",
+    "agent": "CleaningAgent",
+    "action": "mode_imputation",
+    "column": "SaleType"
+  },
+  {
+    "timestamp": "2026-06-19T07:59:39.244838Z",
+    "agent": "CleaningAgent",
+    "action": "drop_columns",
+    "columns": [
+      "Alley",
+      "MasVnrType",
+      "PoolQC",
+      "Fence",
+      "MiscFeature"
+    ]
+  },
+  {
+    "timestamp": "2026-06-19T07:59:39.695697Z",
+    "agent": "EDAAgent",
+    "action": "generate_summary",
+    "num_numerical": 37,
+    "num_categorical": 38
+  },
+  {
+    "timestamp": "2026-06-19T08:00:12.882663Z",
+    "agent": "VisualizationAgent",
+    "action": "generate_charts",
+    "num_charts": 11
+  },
+  {
+    "timestamp": "2026-06-19T08:00:12.967890Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "MSZoning"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:13.028487Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "LotShape"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:13.076631Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "LandContour"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:13.128204Z",
+    "agent": "FeatureAgent",
+    "action": "label_encoding",
+    "column": "Utilities"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:13.176442Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "LotConfig"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:13.243875Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "LandSlope"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:13.289538Z",
+    "agent": "FeatureAgent",
+    "action": "drop_high_cardinality",
+    "column": "Neighborhood"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:13.337121Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "Condition1"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:13.397867Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "Condition2"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:13.462576Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "BldgType"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:13.570371Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "HouseStyle"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:13.623670Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "RoofStyle"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:13.772336Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "RoofMatl"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:13.858706Z",
+    "agent": "FeatureAgent",
+    "action": "drop_high_cardinality",
+    "column": "Exterior1st"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:13.947886Z",
+    "agent": "FeatureAgent",
+    "action": "drop_high_cardinality",
+    "column": "Exterior2nd"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:14.068194Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "ExterQual"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:14.158940Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "ExterCond"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:14.209110Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "Foundation"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:14.277195Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "BsmtQual"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:14.338558Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "BsmtCond"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:14.389112Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "BsmtExposure"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:14.446190Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "BsmtFinType1"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:14.507520Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "BsmtFinType2"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:14.557564Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "Heating"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:14.626402Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "HeatingQC"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:14.676431Z",
+    "agent": "FeatureAgent",
+    "action": "label_encoding",
+    "column": "CentralAir"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:14.742453Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "Electrical"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:14.806756Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "KitchenQual"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:14.858970Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "Functional"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:14.910366Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "FireplaceQu"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:14.982086Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "GarageType"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:15.057048Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "GarageFinish"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:15.127942Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "GarageQual"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:15.202163Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "GarageCond"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:15.267704Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "PavedDrive"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:15.344767Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "SaleType"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:15.409290Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "SaleCondition"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:15.568779Z",
+    "agent": "FeatureAgent",
+    "action": "standard_scaling",
+    "num_columns": 168
+  },
+  {
+    "timestamp": "2026-06-19T08:00:19.281089Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "MSZoning"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:19.379141Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "LotShape"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:19.441634Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "LandContour"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:19.506849Z",
+    "agent": "FeatureAgent",
+    "action": "label_encoding",
+    "column": "Utilities"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:19.573746Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "LotConfig"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:19.627011Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "LandSlope"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:19.669404Z",
+    "agent": "FeatureAgent",
+    "action": "drop_high_cardinality",
+    "column": "Neighborhood"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:19.726916Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "Condition1"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:19.778920Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "Condition2"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:19.838473Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "BldgType"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:19.888916Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "HouseStyle"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:19.946740Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "RoofStyle"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:20.007759Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "RoofMatl"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:20.065212Z",
+    "agent": "FeatureAgent",
+    "action": "drop_high_cardinality",
+    "column": "Exterior1st"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:20.108716Z",
+    "agent": "FeatureAgent",
+    "action": "drop_high_cardinality",
+    "column": "Exterior2nd"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:20.176870Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "ExterQual"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:20.236943Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "ExterCond"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:20.306121Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "Foundation"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:20.362476Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "BsmtQual"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:20.440551Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "BsmtCond"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:20.503308Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "BsmtExposure"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:20.567097Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "BsmtFinType1"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:20.627946Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "BsmtFinType2"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:20.694212Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "Heating"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:20.746222Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "HeatingQC"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:20.798783Z",
+    "agent": "FeatureAgent",
+    "action": "label_encoding",
+    "column": "CentralAir"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:20.870996Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "Electrical"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:20.937044Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "KitchenQual"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:21.007317Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "Functional"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:21.076396Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "FireplaceQu"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:21.147831Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "GarageType"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:21.207211Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "GarageFinish"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:21.270804Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "GarageQual"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:21.337162Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "GarageCond"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:21.403129Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "PavedDrive"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:21.469895Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "SaleType"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:21.539305Z",
+    "agent": "FeatureAgent",
+    "action": "one_hot_encoding",
+    "column": "SaleCondition"
+  },
+  {
+    "timestamp": "2026-06-19T08:00:21.689368Z",
+    "agent": "FeatureAgent",
+    "action": "standard_scaling",
+    "num_columns": 168
+  },
+  {
+    "timestamp": "2026-06-19T08:00:22.855684Z",
+    "agent": "ModelingAgent",
+    "action": "train_model",
+    "model": "LinearRegression",
+    "score": -4390248802.765577
+  },
+  {
+    "timestamp": "2026-06-19T08:00:36.400239Z",
+    "agent": "ModelingAgent",
+    "action": "train_model",
+    "model": "RandomForest",
+    "score": -0.07045415515993789
+  },
+  {
+    "timestamp": "2026-06-19T08:00:41.510057Z",
+    "agent": "ModelingAgent",
+    "action": "train_model",
+    "model": "XGBoost",
+    "score": -0.08935565864913451
+  },
+  {
+    "timestamp": "2026-06-19T08:00:41.586960Z",
+    "agent": "ModelingAgent",
+    "action": "select_best_model",
+    "best_model": "RandomForest",
+    "score": -0.07045415515993789
+  },
+  {
+    "timestamp": "2026-06-19T08:01:51.016563Z",
+    "agent": "HPOAgent",
+    "action": "tuned_model",
+    "best_params": {
+      "n_estimators": 80,
+      "max_depth": 8,
+      "min_samples_split": 10
+    },
+    "new_score": -0.07042026255388727
+  },
+  {
+    "timestamp": "2026-06-19T08:01:56.563992Z",
+    "agent": "EvaluationAgent",
+    "action": "evaluate_model",
+    "mae": 0.012632842985758981,
+    "rmse": 0.0919870067732108,
+    "r2": -0.24391493994592528
+  },
+  {
+    "timestamp": "2026-06-19T08:02:01.455114Z",
+    "agent": "ExplainabilityAgent",
+    "action": "generate_shap",
+    "top_features": [
+      "OverallQual",
+      "1stFlrSF",
+      "Condition1_RRNe",
+      "GarageYrBlt",
+      "LotFrontage"
+    ]
+  },
+  {
+    "timestamp": "2026-06-19T08:02:02.670799Z",
+    "agent": "InsightAgent",
+    "action": "generate_insights",
+    "num_insights": 4
+  }
+]
