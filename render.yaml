@@ -1,0 +1,17 @@
+# Render Blueprint — One-click deploy for ADSA
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: adsa
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: GOOGLE_API_KEY
+        sync: false  # You'll set this manually in Render dashboard
+      - key: GROQ_API_KEY
+        sync: false

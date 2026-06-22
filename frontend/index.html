@@ -3,215 +3,560 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADSA — Autonomous Data Scientist Agent</title>
-    <meta name="description" content="Upload any dataset and get automated ML analysis with insights, charts, and a PDF report.">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <title>ADSA — Autonomous Data Scientist Agent | AI-Powered ML Pipeline</title>
+    <meta name="description" content="Upload any dataset and get automated machine learning analysis with insights, charts, and professional PDF reports. Powered by 13 specialized AI agents.">
+    <meta name="keywords" content="machine learning, data science, AI, automated ML, AutoML, data analysis, ADSA">
+    <meta name="author" content="Sanjay">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <!-- ============ NAVIGATION BAR ============ -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="navLogo">
+                <div class="nav-logo-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <span class="nav-logo-text">ADSA</span>
+                <span class="nav-version">v2</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#tech-stack" class="nav-link">Tech Stack</a>
+                <a href="#app" class="nav-link nav-link-cta">Launch App</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
     <div class="app-wrapper">
         <!-- Ambient background orbs -->
         <div class="bg-orb orb-1"></div>
         <div class="bg-orb orb-2"></div>
         <div class="bg-orb orb-3"></div>
+        <div class="bg-orb orb-4"></div>
 
-        <!-- Header -->
-        <header id="appHeader">
-            <div class="header-content">
-                <div class="logo">
-                    <div class="logo-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                            <path d="M2 17l10 5 10-5"/>
-                            <path d="M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <h1>ADSA <span class="version-badge">v2</span></h1>
+        <!-- ============ HERO SECTION ============ -->
+        <section id="hero" class="hero-section">
+            <div class="hero-particles" id="heroParticles"></div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    <span>AI-Powered Data Science</span>
                 </div>
-                <p class="tagline">Autonomous Data Scientist Agent</p>
+                <h1 class="hero-title">
+                    Your Data.<br>
+                    <span class="hero-gradient-text">Analyzed Autonomously.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Upload any dataset and let 13 specialized AI agents deliver automated ML analysis — 
+                    from cleaning and EDA to model training, explainability, and professional PDF reports.
+                </p>
+                <div class="hero-actions">
+                    <a href="#app" class="btn-hero-primary" id="heroStartBtn">
+                        <span>Start Analyzing</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#features" class="btn-hero-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                        <span>See How It Works</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">13</span>
+                        <span class="hero-stat-label">AI Agents</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">10+</span>
+                        <span class="hero-stat-label">ML Models</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">PDF</span>
+                        <span class="hero-stat-label">Auto Reports</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">RAG</span>
+                        <span class="hero-stat-label">Chat Q&A</span>
+                    </div>
+                </div>
             </div>
-        </header>
+            <div class="hero-glow"></div>
+        </section>
 
-        <main id="mainContent">
-            <!-- =============== PHASE 1: UPLOAD =============== -->
-            <section class="phase-section" id="uploadSection">
-                <div class="upload-card glass-card">
-                    <div class="card-header">
-                        <div class="step-indicator">
-                            <span class="step-number">1</span>
-                            <div>
-                                <h2>Upload & Configure</h2>
-                                <p class="subtitle">Drop your dataset and describe your goal</p>
-                            </div>
+        <!-- ============ FEATURES SECTION ============ -->
+        <section id="features" class="section features-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge">Capabilities</span>
+                    <h2 class="section-title">13 Specialized AI Agents</h2>
+                    <p class="section-subtitle">Each agent is an expert in its domain, working in concert to deliver comprehensive data science analysis.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card" data-delay="0">
+                        <div class="feature-icon" style="--icon-color: #58a6ff;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        </div>
+                        <h3>Planner</h3>
+                        <p>Detects task type — classification, regression, clustering, or time series — and creates an execution plan.</p>
+                    </div>
+                    <div class="feature-card" data-delay="50">
+                        <div class="feature-icon" style="--icon-color: #bc8cff;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <h3>Profiler</h3>
+                        <p>Deep-dives into column types, missing values, duplicates, memory usage, and data quality metrics.</p>
+                    </div>
+                    <div class="feature-card" data-delay="100">
+                        <div class="feature-icon" style="--icon-color: #3fb950;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>Cleaner</h3>
+                        <p>Smart imputation (mean, median, KNN), outlier capping, date conversion, and duplicate removal.</p>
+                    </div>
+                    <div class="feature-card" data-delay="150">
+                        <div class="feature-icon" style="--icon-color: #39d2c0;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                        </div>
+                        <h3>EDA</h3>
+                        <p>Comprehensive exploratory analysis with correlations, distributions, and target variable deep-dives.</p>
+                    </div>
+                    <div class="feature-card" data-delay="200">
+                        <div class="feature-icon" style="--icon-color: #f0883e;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                        </div>
+                        <h3>Visualizer</h3>
+                        <p>Dark-themed charts including histograms, boxplots, heatmaps, and custom analysis plots.</p>
+                    </div>
+                    <div class="feature-card" data-delay="250">
+                        <div class="feature-icon" style="--icon-color: #d29922;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <h3>Feature Engineer</h3>
+                        <p>Automatic encoding, scaling, and mutual information-based feature selection for optimal performance.</p>
+                    </div>
+                    <div class="feature-card" data-delay="300">
+                        <div class="feature-icon" style="--icon-color: #f85149;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                        </div>
+                        <h3>Modeler</h3>
+                        <p>Trains LogisticRegression, RandomForest, and XGBoost with rigorous cross-validation scoring.</p>
+                    </div>
+                    <div class="feature-card" data-delay="350">
+                        <div class="feature-icon" style="--icon-color: #a371f7;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                        </div>
+                        <h3>HPO</h3>
+                        <p>Bayesian hyperparameter optimization with Optuna — 20 trials to find the best configuration.</p>
+                    </div>
+                    <div class="feature-card" data-delay="400">
+                        <div class="feature-icon" style="--icon-color: #58a6ff;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                        <h3>Evaluator</h3>
+                        <p>Holdout metrics, confusion matrices, residual plots, and comprehensive model performance scoring.</p>
+                    </div>
+                    <div class="feature-card" data-delay="450">
+                        <div class="feature-icon" style="--icon-color: #39d2c0;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                        <h3>Explainer</h3>
+                        <p>SHAP-based feature importance with summary and bar plots for transparent model interpretation.</p>
+                    </div>
+                    <div class="feature-card" data-delay="500">
+                        <div class="feature-icon" style="--icon-color: #d29922;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                        </div>
+                        <h3>Insight Generator</h3>
+                        <p>LLM-powered business insights using Gemini Flash, translating model results into actionable advice.</p>
+                    </div>
+                    <div class="feature-card" data-delay="550">
+                        <div class="feature-icon" style="--icon-color: #bc8cff;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        </div>
+                        <h3>Reporter</h3>
+                        <p>Professional PDF report generation with all results, charts, metrics, and insights embedded.</p>
+                    </div>
+                    <div class="feature-card feature-card-accent" data-delay="600">
+                        <div class="feature-icon" style="--icon-color: #f0883e;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <h3>Chat Q&A</h3>
+                        <p>RAG-powered conversational interface — ask questions about your analysis and get instant answers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ HOW IT WORKS ============ -->
+        <section id="how-it-works" class="section how-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge">Workflow</span>
+                    <h2 class="section-title">Three Steps to Insights</h2>
+                    <p class="section-subtitle">From raw data to actionable intelligence in minutes, not days.</p>
+                </div>
+                <div class="how-steps">
+                    <div class="how-step">
+                        <div class="how-step-number">01</div>
+                        <div class="how-step-content">
+                            <h3>Upload Your Data</h3>
+                            <p>Drag and drop any CSV or Excel file and describe your analysis goal in plain English.</p>
+                        </div>
+                        <div class="how-step-visual">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
                         </div>
                     </div>
+                    <div class="how-step-connector">
+                        <svg viewBox="0 0 24 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4,4"><path d="M12 0v48"/></svg>
+                    </div>
+                    <div class="how-step">
+                        <div class="how-step-number">02</div>
+                        <div class="how-step-content">
+                            <h3>Watch AI Agents Work</h3>
+                            <p>Monitor 13 specialized agents in real-time as they clean, analyze, model, and explain your data.</p>
+                        </div>
+                        <div class="how-step-visual">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                    </div>
+                    <div class="how-step-connector">
+                        <svg viewBox="0 0 24 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4,4"><path d="M12 0v48"/></svg>
+                    </div>
+                    <div class="how-step">
+                        <div class="how-step-number">03</div>
+                        <div class="how-step-content">
+                            <h3>Get Results & Chat</h3>
+                            <p>Download a comprehensive PDF report, explore interactive charts, and ask questions via RAG chat.</p>
+                        </div>
+                        <div class="how-step-visual">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <form id="uploadForm" autocomplete="off">
-                        <div class="file-drop-zone" id="fileDropZone">
-                            <div class="drop-content">
-                                <div class="drop-icon-wrapper">
-                                    <svg class="drop-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
-                                    </svg>
+        <!-- ============ TECH STACK ============ -->
+        <section id="tech-stack" class="section tech-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge">Technology</span>
+                    <h2 class="section-title">Built with Industry Leaders</h2>
+                    <p class="section-subtitle">Enterprise-grade tools powering every layer of the pipeline.</p>
+                </div>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap"><span class="tech-emoji">🦜</span></div>
+                        <span class="tech-name">LangGraph</span>
+                        <span class="tech-role">Orchestration</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap"><span class="tech-emoji">✨</span></div>
+                        <span class="tech-name">Gemini Flash</span>
+                        <span class="tech-role">LLM</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap"><span class="tech-emoji">🐼</span></div>
+                        <span class="tech-name">Pandas</span>
+                        <span class="tech-role">Data Processing</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap"><span class="tech-emoji">🚀</span></div>
+                        <span class="tech-name">XGBoost</span>
+                        <span class="tech-role">ML Models</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap"><span class="tech-emoji">🎯</span></div>
+                        <span class="tech-name">Optuna</span>
+                        <span class="tech-role">HPO</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap"><span class="tech-emoji">🔍</span></div>
+                        <span class="tech-name">SHAP</span>
+                        <span class="tech-role">Explainability</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap"><span class="tech-emoji">📊</span></div>
+                        <span class="tech-name">Matplotlib</span>
+                        <span class="tech-role">Visualization</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap"><span class="tech-emoji">⚡</span></div>
+                        <span class="tech-name">FastAPI</span>
+                        <span class="tech-role">Backend</span>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon-wrap"><span class="tech-emoji">🧠</span></div>
+                        <span class="tech-name">FAISS</span>
+                        <span class="tech-role">Vector DB</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ APP SECTION (Upload / Pipeline / Results) ============ -->
+        <section id="app" class="section app-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-badge">Application</span>
+                    <h2 class="section-title">Ready to Analyze?</h2>
+                    <p class="section-subtitle">Upload your dataset and let the agents handle the rest.</p>
+                </div>
+
+                <!-- PHASE 1: UPLOAD -->
+                <div class="phase-section" id="uploadSection">
+                    <div class="upload-card glass-card">
+                        <div class="card-header">
+                            <div class="step-indicator">
+                                <span class="step-number">1</span>
+                                <div>
+                                    <h2>Upload & Configure</h2>
+                                    <p class="card-subtitle">Drop your dataset and describe your analysis goal</p>
                                 </div>
-                                <p class="drop-text" id="dropText">Drag & drop CSV or Excel file</p>
-                                <p class="drop-hint">or click to browse</p>
                             </div>
-                            <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" required>
                         </div>
 
-                        <div class="form-field">
-                            <label for="goalInput">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <path d="M12 16v-4M12 8h.01"/>
+                        <form id="uploadForm" autocomplete="off">
+                            <div class="file-drop-zone" id="fileDropZone">
+                                <div class="drop-content">
+                                    <div class="drop-icon-wrapper">
+                                        <svg class="drop-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                                        </svg>
+                                    </div>
+                                    <p class="drop-text" id="dropText">Drag & drop CSV or Excel file</p>
+                                    <p class="drop-hint">or click to browse · Supports .csv, .xlsx, .xls</p>
+                                </div>
+                                <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="goalInput">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M12 16v-4M12 8h.01"/>
+                                    </svg>
+                                    Analysis Goal
+                                </label>
+                                <textarea id="goalInput" placeholder="e.g., Predict customer churn, Forecast next month's sales, Segment users by behavior..." required rows="3"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary" id="startBtn">
+                                <span class="btn-label" id="btnLabel">Launch Analysis</span>
+                                <div class="btn-spinner hidden" id="btnSpinner"></div>
+                                <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
                                 </svg>
-                                Analysis Goal
-                            </label>
-                            <textarea id="goalInput" placeholder="e.g., Predict customer churn, Forecast next month's sales, Segment users by behavior..." required rows="3"></textarea>
-                        </div>
+                            </button>
+                        </form>
 
-                        <button type="submit" class="btn-primary" id="startBtn">
-                            <span class="btn-label" id="btnLabel">Launch Analysis</span>
-                            <div class="btn-spinner hidden" id="btnSpinner"></div>
-                            <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M5 12h14M12 5l7 7-7 7"/>
-                            </svg>
-                        </button>
-                    </form>
-
-                    <div class="error-toast hidden" id="errorToast"></div>
-                </div>
-            </section>
-
-            <!-- =============== PHASE 2: PIPELINE =============== -->
-            <section class="phase-section hidden" id="pipelineSection">
-                <div class="pipeline-header">
-                    <div class="pipeline-title">
-                        <h2>Analysis Pipeline</h2>
-                        <div class="live-badge" id="liveBadge">
-                            <span class="live-dot"></span>
-                            <span>LIVE</span>
-                        </div>
-                    </div>
-                    <p class="pipeline-subtitle" id="pipelineSubtitle">Running 12 specialized AI agents...</p>
-                </div>
-
-                <div class="pipeline-track" id="pipelineTrack">
-                    <!-- Filled by JS -->
-                </div>
-
-                <div class="step-detail-card glass-card" id="stepDetailCard">
-                    <div class="detail-header">
-                        <h3 id="stepDetailTitle">Starting...</h3>
-                        <span class="detail-badge" id="stepDetailBadge">In Progress</span>
-                    </div>
-                    <div class="detail-body" id="stepDetailBody">
-                        <p>Initializing the pipeline...</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- =============== PHASE 3: RESULTS =============== -->
-            <section class="phase-section hidden" id="resultsSection">
-                <!-- Success Header -->
-                <div class="results-hero">
-                    <div class="success-icon-lg">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h2>Analysis Complete</h2>
-                        <p id="resultsSummary">Your data has been fully analyzed</p>
+                        <div class="error-toast hidden" id="errorToast"></div>
                     </div>
                 </div>
 
-                <!-- Metrics Cards -->
-                <div class="metrics-grid" id="metricsGrid">
-                    <!-- Filled by JS -->
-                </div>
-
-                <!-- Insights Panel -->
-                <div class="glass-card insights-panel">
-                    <div class="panel-header">
-                        <h3>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                            </svg>
-                            Business Insights
-                        </h3>
-                    </div>
-                    <ul class="insight-list" id="insightList">
-                        <!-- Filled by JS -->
-                    </ul>
-                </div>
-
-                <!-- Charts Gallery -->
-                <div class="glass-card charts-panel">
-                    <div class="panel-header">
-                        <h3>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                                <circle cx="8.5" cy="8.5" r="1.5"/>
-                                <polyline points="21 15 16 10 5 21"/>
-                            </svg>
-                            Generated Charts
-                        </h3>
-                    </div>
-                    <div class="chart-gallery" id="chartGallery">
-                        <!-- Filled by JS -->
-                    </div>
-                </div>
-
-                <!-- Action Buttons -->
-                <div class="results-actions">
-                    <button class="btn-primary" id="downloadReportBtn">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-                        </svg>
-                        Download PDF Report
-                    </button>
-                    <button class="btn-secondary" id="newAnalysisBtn">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="1 4 1 10 7 10"/>
-                            <path d="M3.51 15a9 9 0 102.13-9.36L1 10"/>
-                        </svg>
-                        New Analysis
-                    </button>
-                </div>
-
-                <!-- Chat Panel -->
-                <div class="glass-card chat-panel">
-                    <div class="panel-header">
-                        <h3>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
-                            </svg>
-                            Ask About Your Data
-                        </h3>
-                    </div>
-                    <div class="chat-messages" id="chatMessages">
-                        <div class="chat-msg bot-msg">
-                            <div class="msg-avatar">AI</div>
-                            <div class="msg-content">
-                                <p>Analysis complete! Ask me anything about the results — features, metrics, insights, or recommendations.</p>
+                <!-- PHASE 2: PIPELINE -->
+                <div class="phase-section hidden" id="pipelineSection">
+                    <div class="pipeline-header">
+                        <div class="pipeline-title">
+                            <h2>Analysis Pipeline</h2>
+                            <div class="live-badge" id="liveBadge">
+                                <span class="live-dot"></span>
+                                <span>LIVE</span>
                             </div>
                         </div>
+                        <p class="pipeline-subtitle" id="pipelineSubtitle">Running 12 specialized AI agents...</p>
                     </div>
-                    <form class="chat-input-area" id="chatForm">
-                        <input type="text" id="chatInput" placeholder="e.g., What are the top features?" autocomplete="off">
-                        <button type="submit" class="chat-send-btn" id="chatSendBtn">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="22" y1="2" x2="11" y2="13"/>
-                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-                            </svg>
-                        </button>
-                    </form>
+
+                    <div class="pipeline-track" id="pipelineTrack">
+                        <!-- Filled by JS -->
+                    </div>
+
+                    <div class="step-detail-card glass-card" id="stepDetailCard">
+                        <div class="detail-header">
+                            <h3 id="stepDetailTitle">Starting...</h3>
+                            <span class="detail-badge" id="stepDetailBadge">In Progress</span>
+                        </div>
+                        <div class="detail-body" id="stepDetailBody">
+                            <p>Initializing the pipeline...</p>
+                        </div>
+                    </div>
                 </div>
-            </section>
-        </main>
+
+                <!-- PHASE 3: RESULTS -->
+                <div class="phase-section hidden" id="resultsSection">
+                    <!-- Success Header -->
+                    <div class="results-hero">
+                        <div class="success-icon-lg">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h2>Analysis Complete</h2>
+                            <p id="resultsSummary">Your data has been fully analyzed</p>
+                        </div>
+                    </div>
+
+                    <!-- Metrics Cards -->
+                    <div class="metrics-grid" id="metricsGrid">
+                        <!-- Filled by JS -->
+                    </div>
+
+                    <!-- Insights Panel -->
+                    <div class="glass-card insights-panel">
+                        <div class="panel-header">
+                            <h3>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-1.754-.988-2.386l-.548-.547z"/>
+                                </svg>
+                                Business Insights
+                            </h3>
+                        </div>
+                        <ul class="insight-list" id="insightList">
+                            <!-- Filled by JS -->
+                        </ul>
+                    </div>
+
+                    <!-- Charts Gallery -->
+                    <div class="glass-card charts-panel">
+                        <div class="panel-header">
+                            <h3>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                                    <polyline points="21 15 16 10 5 21"/>
+                                </svg>
+                                Generated Charts
+                            </h3>
+                        </div>
+                        <div class="chart-gallery" id="chartGallery">
+                            <!-- Filled by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="results-actions">
+                        <button class="btn-primary" id="downloadReportBtn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                            </svg>
+                            Download PDF Report
+                        </button>
+                        <button class="btn-secondary" id="newAnalysisBtn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="1 4 1 10 7 10"/>
+                                <path d="M3.51 15a9 9 0 102.13-9.36L1 10"/>
+                            </svg>
+                            New Analysis
+                        </button>
+                    </div>
+
+                    <!-- Chat Panel -->
+                    <div class="glass-card chat-panel">
+                        <div class="panel-header">
+                            <h3>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                                </svg>
+                                Ask About Your Data
+                            </h3>
+                        </div>
+                        <div class="chat-messages" id="chatMessages">
+                            <div class="chat-msg bot-msg">
+                                <div class="msg-avatar">AI</div>
+                                <div class="msg-content">
+                                    <p>Analysis complete! Ask me anything about the results — features, metrics, insights, or recommendations.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="chat-input-area" id="chatForm">
+                            <input type="text" id="chatInput" placeholder="e.g., What are the top features?" autocomplete="off">
+                            <button type="submit" class="chat-send-btn" id="chatSendBtn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"/>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FOOTER ============ -->
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <div class="nav-logo-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                    <path d="M2 17l10 5 10-5"/>
+                                    <path d="M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <span>ADSA v2</span>
+                        </div>
+                        <p class="footer-desc">Autonomous Data Scientist Agent — transforming raw data into actionable intelligence with AI-powered automation.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#tech-stack">Tech Stack</a></li>
+                            <li><a href="#app">Launch App</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="https://github.com/eternal-sanjay25/ADSA" target="_blank" rel="noopener">GitHub</a></li>
+                            <li><a href="https://github.com/eternal-sanjay25/ADSA#readme" target="_blank" rel="noopener">Documentation</a></li>
+                            <li><a href="https://github.com/eternal-sanjay25/ADSA/issues" target="_blank" rel="noopener">Report Issues</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Tech</h4>
+                        <ul>
+                            <li><a href="https://www.langchain.com/langgraph" target="_blank" rel="noopener">LangGraph</a></li>
+                            <li><a href="https://aistudio.google.com" target="_blank" rel="noopener">Google AI Studio</a></li>
+                            <li><a href="https://fastapi.tiangolo.com" target="_blank" rel="noopener">FastAPI</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 ADSA. Built by <a href="https://github.com/eternal-sanjay25" target="_blank" rel="noopener">Sanjay</a>. Open-source under MIT License.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/eternal-sanjay25" target="_blank" rel="noopener" aria-label="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <script src="app.js"></script>

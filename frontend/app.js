@@ -1,6 +1,7 @@
 // ================================================================
 // ADSA v2 — Frontend Application Logic
 // SSE-based pipeline streaming, chat, chart gallery
+// Navigation, scroll animations, and interactive UI
 // ================================================================
 
 // --- DOM References ---
@@ -38,6 +39,11 @@ const chatForm     = document.getElementById('chatForm');
 const chatInput    = document.getElementById('chatInput');
 const chatSendBtn  = document.getElementById('chatSendBtn');
 
+// Navigation
+const navbar     = document.getElementById('navbar');
+const navToggle  = document.getElementById('navToggle');
+const navLinks   = document.getElementById('navLinks');
+
 // --- State ---
 let sessionId = null;
 
@@ -71,7 +77,152 @@ const STEP_DESCRIPTIONS = {
     report:         'Building PDF report...',
 };
 
-// --- File Drop Zone ---
+// ================================================================
+// NAVIGATION
+// ================================================================
+
+// Scroll effect for navbar
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+
+    // Add/remove scrolled class
+    if (scrollY > 30) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+
+    lastScroll = scrollY;
+
+    // Update active nav link based on scroll position
+    updateActiveNavLink();
+}, { passive: true });
+
+// Active nav link tracking
+function updateActiveNavLink() {
+    const sections = document.querySelectorAll('.hero-section, .section');
+    const navLinksAll = document.querySelectorAll('.nav-link:not(.nav-link-cta)');
+    let current = '';
+
+    sections.forEach(section => {
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinksAll.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        if (href === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Mobile menu toggle
+navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('open');
+    navLinks.classList.toggle('open');
+});
+
+// Close mobile menu on link click
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+    });
+});
+
+// ================================================================
+// SCROLL ANIMATIONS (Intersection Observer)
+// ================================================================
+
+function initScrollAnimations() {
+    // Add fade-up class to animatable elements
+    const animateTargets = document.querySelectorAll(
+        '.feature-card, .how-step, .tech-item, .section-header'
+    );
+
+    animateTargets.forEach(el => {
+        el.classList.add('fade-up');
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const delay = entry.target.dataset.delay || 0;
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, delay);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    animateTargets.forEach(el => observer.observe(el));
+}
+
+// ================================================================
+// HERO PARTICLES
+// ================================================================
+
+function initHeroParticles() {
+    const container = document.getElementById('heroParticles');
+    if (!container) return;
+
+    const particleCount = 30;
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.style.cssText = `
+            position: absolute;
+            width: ${Math.random() * 3 + 1}px;
+            height: ${Math.random() * 3 + 1}px;
+            border-radius: 50%;
+            background: rgba(88, 166, 255, ${Math.random() * 0.3 + 0.05});
+            left: ${Math.random() * 100}%;
+            top: ${Math.random() * 100}%;
+            animation: floatParticle ${Math.random() * 15 + 10}s ease-in-out infinite;
+            animation-delay: ${Math.random() * 5}s;
+        `;
+        container.appendChild(particle);
+    }
+
+    // Add the float animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes floatParticle {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+            25% { transform: translate(${Math.random() * 60 - 30}px, ${Math.random() * 60 - 30}px) scale(1.2); opacity: 0.6; }
+            50% { transform: translate(${Math.random() * 80 - 40}px, ${Math.random() * 80 - 40}px) scale(0.8); opacity: 0.4; }
+            75% { transform: translate(${Math.random() * 60 - 30}px, ${Math.random() * 60 - 30}px) scale(1.1); opacity: 0.5; }
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// ================================================================
+// SMOOTH SCROLL FOR CTA BUTTONS
+// ================================================================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+// ================================================================
+// FILE DROP ZONE
+// ================================================================
+
 fileInput.addEventListener('change', () => {
     if (fileInput.files.length > 0) {
         dropText.textContent = fileInput.files[0].name;
@@ -98,7 +249,10 @@ fileDropZone.addEventListener('drop', (e) => {
     }
 });
 
-// --- Upload & Start ---
+// ================================================================
+// UPLOAD & START
+// ================================================================
+
 uploadForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     errorToast.classList.add('hidden');
@@ -140,7 +294,10 @@ uploadForm.addEventListener('submit', async (e) => {
     }
 });
 
-// --- Pipeline SSE ---
+// ================================================================
+// PIPELINE SSE
+// ================================================================
+
 function startPipelineSSE() {
     const evtSource = new EventSource(`/api/run/${sessionId}`);
 
@@ -173,7 +330,10 @@ function startPipelineSSE() {
     };
 }
 
-// --- Pipeline Track UI ---
+// ================================================================
+// PIPELINE TRACK UI
+// ================================================================
+
 function initPipelineTrack() {
     pipelineTrack.innerHTML = '';
     STEPS.forEach((step) => {
@@ -247,7 +407,10 @@ function formatStepResult(data) {
     return parts.join('<br>') || 'Completed';
 }
 
-// --- Results ---
+// ================================================================
+// RESULTS
+// ================================================================
+
 function showResults(data) {
     showPhase('results');
 
@@ -304,7 +467,10 @@ function showResults(data) {
     });
 }
 
-// --- Chart Lightbox ---
+// ================================================================
+// CHART LIGHTBOX
+// ================================================================
+
 function openLightbox(src) {
     const overlay = document.createElement('div');
     overlay.className = 'lightbox-overlay';
@@ -313,7 +479,10 @@ function openLightbox(src) {
     document.body.appendChild(overlay);
 }
 
-// --- Chat ---
+// ================================================================
+// CHAT
+// ================================================================
+
 chatForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const question = chatInput.value.trim();
@@ -350,13 +519,19 @@ function addChatMessage(text, sender) {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
-// --- Report Download ---
+// ================================================================
+// REPORT DOWNLOAD
+// ================================================================
+
 downloadReportBtn.addEventListener('click', () => {
     if (!sessionId) return;
     window.open(`/api/report/${sessionId}`, '_blank');
 });
 
-// --- New Analysis ---
+// ================================================================
+// NEW ANALYSIS
+// ================================================================
+
 newAnalysisBtn.addEventListener('click', () => {
     sessionId = null;
     fileInput.value = '';
@@ -366,7 +541,10 @@ newAnalysisBtn.addEventListener('click', () => {
     showPhase('upload');
 });
 
-// --- Phase Navigation ---
+// ================================================================
+// PHASE NAVIGATION
+// ================================================================
+
 function showPhase(phase) {
     uploadSection.classList.add('hidden');
     pipelineSection.classList.add('hidden');
@@ -376,12 +554,29 @@ function showPhase(phase) {
     if (phase === 'pipeline') pipelineSection.classList.remove('hidden');
     if (phase === 'results')  resultsSection.classList.remove('hidden');
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Scroll to app section
+    const appSection = document.getElementById('app');
+    if (appSection) {
+        appSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 }
 
-// --- Error Display ---
+// ================================================================
+// ERROR DISPLAY
+// ================================================================
+
 function showError(msg) {
     errorToast.textContent = msg;
     errorToast.classList.remove('hidden');
     setTimeout(() => errorToast.classList.add('hidden'), 5000);
 }
+
+// ================================================================
+// INITIALIZATION
+// ================================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    initScrollAnimations();
+    initHeroParticles();
+    updateActiveNavLink();
+});
